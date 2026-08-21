@@ -17,7 +17,7 @@ donFaceEncoding=fr.face_encodings(donFace)[0]
 nancyFace=fr.load_image_file('demoImages/known/Nancy Pelosi.jpg')
 
 # face location returns array of array where each array is [top, right, bottom, left] of each face
-nancyFaceLoc=fr.face_locations(donFace)[0]
+nancyFaceLoc=fr.face_locations(nancyFace)[0]
 # top, right, bottom, left = faceLoc
 # print(nancyFaceLoc)
 
