@@ -1,13 +1,10 @@
 import os 
 import cv2
 import face_recognition as fr
-print(cv2.__version__)
-
-import pickle
-
 import json
 import numpy as np
 
+print(cv2.__version__)
 
 
 
@@ -26,8 +23,8 @@ for root, dirs, files in os.walk(knownImageDir):
 with open('encodings.json', 'w') as f:
     json.dump({k: v.tolist() for k, v in knownEncodings.items()}, f)
 
-# read
-with open('encodings.json') as f:
-    knownEncodings = {k: np.array(v) for k, v in json.load(f).items()}
+# # read
+# with open('encodings.json') as f:
+#     knownEncodings = {k: np.array(v) for k, v in json.load(f).items()}
 
 print(knownEncodings) 
